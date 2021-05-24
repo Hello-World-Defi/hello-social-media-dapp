@@ -13,3 +13,17 @@ struct User {
     uint date_of_birth;
     Coordinate home_address;
 }
+
+struct Post {
+    string text;
+    User creator;
+    uint created;
+    Coordinate location;
+}
+
+struct Comment {
+    string text;
+    Post post;
+    User commentor;
+    uint commented;
+}
