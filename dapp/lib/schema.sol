@@ -17,7 +17,7 @@ struct User {
 struct Post {
     string text;
     User creator;
-    uint created;
+    uint created_dt;
     Coordinate location;
 }
 
@@ -25,5 +25,5 @@ struct Comment {
     string text;
     Post post;
     User commentor;
-    uint commented;
+    uint commented_dt;
 }

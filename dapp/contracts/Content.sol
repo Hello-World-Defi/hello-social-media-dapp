@@ -9,23 +9,22 @@ contract Content {
     constructor(
         string memory _text,
         User memory _creator,
-        uint _created
         Coordinate memory _location
     ) {
         post = Post({
             text: _text,
             creator: _creator,
-            created: _created,
-            location: _location,
+            created_dt: block.timestamp,
+            location: _location
         });
     }
 
-    function comment(string memory _text, User _commentor, uint commented) public {
+    function comment(string memory _text, User memory _commentor) public {
         comments.push(Comment({
             text: _text,
             commentor: _commentor,
             post: post,
-            commented: _commented 
+            commented_dt: block.timestamp 
         }));
     }
 }
